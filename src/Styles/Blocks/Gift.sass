@@ -1,0 +1,72 @@
+@import "../../Variables/Variables"
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap')
+
+
+.gift-block
+  display: grid
+  width: 100%
+  justify-content: center
+  align-items: center
+  grid-template-columns: 0.8fr 1fr
+  margin-bottom: 100px
+  p:nth-child(1)
+    @include font($fs1, $fwB)
+    color: $red
+    letter-spacing: 0.03em
+    svg
+      width: 10rem
+  p:nth-child(2)
+    @include font($fs3, $fwR)
+  p:nth-child(4)
+    @include font($fs3, $fwB)
+
+.gift-image
+  @include center
+  img
+    width: 400px
+.gift-content
+  width: 90%
+
+@media (max-width: $xl)
+  .gift-block
+    width: 95%
+    column-gap: 0
+  .gift-content
+    width: 100%
+  .gift-image
+    width: 400px
+
+
+@media (max-width: $lg)
+  .gift-image
+    width: 200px
+
+@media (max-width: $md)
+  .gift-image
+    width: 150px
+
+@media (max-width: $sm)
+  .gift-block
+    grid-template-columns: 1fr
+    width: 100%
+    text-align: center
+    justify-items: center
+    background: url("https://i.ibb.co/0Jz93kd/Group-12.png") no-repeat
+  .gift-content
+    padding: 0
+    width: 80%
+    @include center
+
+    flex-direction: column
+  .gift-image
+    display: none!important
+
+@media (max-width: $xs)
+  .gift-block
+    background: url("https://i.ibb.co/HTxhJMg/Group-12.png") no-repeat
+
+
+
+
+
+

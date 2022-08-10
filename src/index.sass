@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,700&display=swap')
+
+@import "./Variables/Variables.sass"
+
+body
+  margin: 0
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font-family: 'Montserrat', sans-serif
+  width: 100%
+
+.App
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+
+
+.red-color
+  color: $red
+
+.light-red-color
+  color: #FF9CA9
+  @include font($fs4, $fwR)
+
+.title-word
+  @include font($fs1, $fwB)
+
+.subtitle-word
+  @include font($fs3, $fwB)
+
+html
+  font-size: 25.00px
+
+.inner
+  padding: 0 3rem
+  @include center
+  flex-direction: column
+  gap: 80px
+
+.second_inner
+  margin: 100px 0
+
+@media (max-width: $xxxl)
+  html
+    font-size: 25px
+
+@media (max-width: $xxl)
+
+
+@media (max-width: $xl)
+  .inner
+    padding: 0 50px
+
+@media (max-width: $lg)
+  .inner
+    padding: 0 30px
+
+@media (max-width: $md)
+  html
+    font-size: 20.00px
+  .inner
+    padding: 0 30px
+
+@media (max-width: $xs)
+  html
+    font-size: 16.00px
+  .inner
+    padding: 0 20px
+
+
+////xxl
+//@media (max-width: 1400px) {
+//
+//}
+//
+////xl
+//@media (max-width: 1200px) {
+//
+//}
+//
+////lg
+//@media (max-width: 992px) {
+//
+//}
+//
+////md
+//@media (max-width: 768px) {
+//
+//}
+//
+////sm
+//@media (max-width: 576px) {
+//
+//}
+//
+////xs
+//@media (max-width: 320px) {
+//
+//}
+
+a,a:visited
+  text-decoration: none
+
+a:hover
+  text-decoration: none
+
+a:focus,a:active
+  outline: none
+
+button
+  cursor: pointer
+
+button::-moz-focus-inner
+  padding: 0
+  border: 0
+
+::-webkit-input-placeholder
+  text-align: left
+  padding: 20px

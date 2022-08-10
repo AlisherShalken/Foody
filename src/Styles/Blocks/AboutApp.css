@@ -1,0 +1,100 @@
+/*--------------------*/
+.about-app-block {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  row-gap: 50px;
+}
+
+.about-app-first-text {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-app-first-text p:nth-child(1) {
+  font-size: 1.728rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+.about-app-first-text p:nth-child(2) {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.about-app-second-text {
+  width: 70%;
+  height: auto;
+}
+.about-app-second-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+.about-app-second-text p:nth-child(n+2) {
+  color: #AAAAAA;
+}
+
+.about-app-btn {
+  font-size: 1.44rem;
+  font-weight: 900;
+  border: 1px solid #BE123C;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #BE123C;
+  color: white;
+  padding: 10px 22px;
+}
+
+.about-app-img {
+  display: flex;
+  align-items: end;
+}
+.about-app-img img {
+  margin-top: 50px;
+  width: 300px;
+}
+
+@media (max-width: 1200px) {
+  .about-app-first-text, .about-app-second-text {
+    width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  .about-app-block {
+    grid-template-columns: 1fr;
+  }
+  .about-app-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-app-download {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .about-app-download .btn2 {
+    margin: 0 0 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  .about-app-block {
+    row-gap: 0;
+  }
+  .about-app-download {
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-app-download .btn2 {
+    margin: -30px 0 30px 0;
+  }
+}
+@media (max-width: 576px) {
+  .about-app-download {
+    align-items: start;
+  }
+}/*# sourceMappingURL=AboutApp.css.map */

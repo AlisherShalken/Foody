@@ -1,0 +1,161 @@
+@import "../../Variables/Variables"
+
+.demo-block
+  width: 100%
+
+.demo-cards-group
+  overflow: hidden
+  @include center
+  flex-direction: column
+  row-gap: 40px
+  width: 100%
+.demo-card
+  @include font($fs3, $fwR)
+  display: flex
+  flex-direction: row
+  width: 100%
+  column-gap: 60px
+  .demo-card-content
+    display: flex
+    flex-direction: column
+    gap: 60px
+    width: 100%
+
+.demo-card:nth-child(1)
+  flex-direction: row
+  .demo-card-content
+    .demo-card-content-text
+      width: 22em
+
+.demo-card:nth-child(even)
+  flex-direction: row-reverse
+  column-gap: 20px
+  .demo-card-person
+    margin-top: -12%
+  .demo-card-content
+    .demo-card-content-text
+      text-align: right
+      //width: 20em
+    .demo-card-content-arrow
+      transform: scaleX(-1)
+
+.demo-card:nth-child(3)
+  margin-top: -6%
+  .demo-card-person
+    width: 20%
+  .demo-card-content-text
+    margin-top: 20px
+  .demo-card-content-arrow
+    img
+      margin-left: -20px
+
+
+
+
+@media (max-width: $xxl)
+  .demo-cards-group
+    overflow: hidden
+
+  .demo-card
+    .demo-card-content-arrow
+      img
+        margin-left: -18%
+        width: 80%
+
+  .demo-card:nth-child(1)
+    .demo-card-person
+      width: 30%
+
+  .demo-card:nth-child(even)
+    .demo-card-person
+      margin-top: -10%
+      width: 30%
+
+  .demo-card:nth-child(3)
+    gap: 120px
+    .demo-card-person
+      width: 20%
+
+
+
+@media (max-width: $xl)
+  .demo-card
+    .demo-card-content-arrow
+      img
+        margin-left: 0
+        width: 60%
+
+  .demo-card:nth-child(1)
+    column-gap: 10px
+    .demo-card-person
+      width: 30%
+    .demo-card-content
+      .demo-card-content-text
+        width: auto
+
+  .demo-card:nth-child(even)
+    .demo-card-person
+      margin-top: -10%
+      width: 30%
+
+  .demo-card:nth-child(3)
+    gap: 120px
+    .demo-card-person
+      width: 20%
+
+@media (max-width: $lg)
+  .demo-card:nth-child(even)
+    .demo-card-person
+      img
+        margin-left: -30%
+
+@media (max-width: $md)
+  .demo-card:nth-child(1)
+    column-gap: 0px
+    .demo-card-content
+      .demo-card-content-text
+        width: auto
+    .demo-card-person
+      img
+        margin-left: -0
+  .demo-card:nth-child(even)
+    .demo-card-person
+      img
+        margin-left: -80%
+  .demo-card:nth-child(3)
+    .demo-card-person
+      img
+        margin-left: -30%
+
+
+@media (max-width: $sm)
+  //.demo-card
+  //  .demo-card-person
+  //    img
+  //      transform: scale(0.5)
+  .demo-card:nth-child(1)
+    column-gap: 0px
+    .demo-card-content
+      .demo-card-content-text
+        width: auto
+      .demo-card-content-arrow
+        img
+         margin: 20px 50px
+    .demo-card-person
+      img
+        margin-left: -60%
+  .demo-card:nth-child(even)
+    .demo-card-person
+      img
+        margin-left: -150%
+    .demo-card-content
+      .demo-card-content-text
+        width: auto
+      .demo-card-content-arrow
+        img
+          margin: 30px 10px
+  .demo-card:nth-child(3)
+    gap: 90px
+    .demo-card-person
+      img
+        margin-left: -60%

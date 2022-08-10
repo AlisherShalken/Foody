@@ -1,0 +1,46 @@
+@import "../../Variables/Variables"
+
+.accordion
+  width: 100%
+  .accordion-item
+    &:first-child
+      border-top: 1px solid black
+    .title
+      display: grid
+      grid-template-columns: 2fr 0.05fr
+      font-family: $montserrat
+      @include font($fs3, $fwR)
+      border: none
+      //border-bottom: 1px solid black
+      background-color: white
+      color: #444
+      cursor: pointer
+      padding: 18px 0
+      width: 100%
+      text-align: left
+      &:after
+        content: '+'
+        color: #BE123C
+        font-size: $fs1
+        margin: -5px 0
+    .panel
+      max-height: 0
+      transition: max-height 0.15s ease-out
+      @include font($fs5, $fwR)
+      overflow: hidden
+      padding: 0
+      border-bottom: 1px solid black
+    &.active
+      .title
+        background-color: #ffffff
+        &:after
+          content: '–'
+          color: #BE123C
+          font-size: $fs1
+          float: right
+          margin: -10px 0
+      .panel
+        max-height: 500px
+        -webkit-transition: max-height 0.25s ease-in
+        -o-transition: max-height 0.25s ease-in
+        transition: max-height 0.25s ease-in

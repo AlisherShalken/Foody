@@ -1,0 +1,74 @@
+@import "../../Variables/Variables"
+
+footer
+  background: #383838
+  display: grid
+  grid-template-columns: 0.2fr 0.2fr
+  justify-items: center
+  gap: 80px
+  color: white
+  padding: 20px 210px
+  div
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      li
+        margin: 0.5rem 0
+        @include font($fs5, $fwR)
+      li:nth-child(1)
+        @include font($fs4, $fwB)
+        margin: 20px 0
+  div:nth-child(1)
+    justify-items: end
+    ul
+      list-style-type: none
+      margin: 0
+      li
+        margin: 0.78rem 0
+        @include font($fs5, $fwR)
+        display: flex
+        align-items: center
+      li:nth-child(1)
+        @include font($fs4, $fwB)
+        margin: 20px 0
+  .footer-icons
+    margin: 0 30px 0 0
+    @include size(20px, 20px)
+  .footer-social-group
+    display: flex
+    flex-direction: row
+    column-gap: 55px
+
+
+@media (max-width: $xl)
+  footer
+    padding: 20px 110px
+
+@media (max-width: $md)
+  footer
+    padding: 20px 50px
+
+@media (max-width: $md)
+  footer
+    padding: 20px 50px
+    gap: 50px
+
+
+@media (max-width: $sm)
+  footer
+    display: flex
+    flex-direction: column
+    align-items: start
+    padding: 0 40px
+    gap: 5px
+    div:nth-child(1)
+      display: grid
+      grid-template-columns: 1fr 0.8fr
+    .footer-social-group
+      gap: 14px
+      flex-direction: column!important
+      margin: 0
+      align-items: flex-end
+      li
+        margin: 10px 0!important

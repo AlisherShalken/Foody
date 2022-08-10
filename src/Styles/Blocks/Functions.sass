@@ -1,0 +1,167 @@
+@import "../../Variables/Variables"
+
+
+.func-cards-container
+  display: grid
+  justify-content: center
+  align-items: center
+  gap: 25px
+  @include size(100%, auto)
+  div:nth-child(1)
+    grid-column: 1 / 13
+  div:nth-child(2)
+    grid-column: 13 / 24
+  div:nth-child(3)
+    grid-column: 1 / 11
+  div:nth-child(4)
+    grid-column: 11 / 24
+  div:nth-child(5)
+    grid-column: 1 / 24
+  div:nth-child(6)
+    grid-column: 1 / 13
+  div:nth-child(7)
+    grid-column: 13 / 24
+
+.func-card
+  display: grid
+  column-gap: 12px
+  align-self: stretch
+  div:nth-child(1)
+    white-space: nowrap
+    grid-column: 1 / 10
+  div:nth-child(2)
+    grid-column: 1 / 10
+  div:nth-child(3)
+    justify-content: center
+    margin-top: -30%
+    grid-column: 10 / 24
+  padding: 30px
+  @include border(0, auto, 30px)
+  background-color: #F1F1F1
+  div
+    display: grid
+    align-items: center
+    align-content: center
+    flex-direction: row
+
+.func-card:nth-child(5)
+  //column-gap: 20px
+  div:nth-child(2)
+    width: 100%
+  div:nth-child(3)
+    display: flex
+    justify-content: start
+    margin-top: -40%
+    img
+      width: 7rem
+
+
+.func-card-leading-text
+  display: inline-block
+  @include font($fs4, $fwB)
+  margin-bottom: 15px
+  span
+    @include font($fs5, $fwB)
+    color: $gray
+
+
+.func-card-secondary-text
+  @include font($fs6, $fwR)
+
+.func-cards-sm-container
+  display: none
+
+@media (max-width: $xl)
+  .func-cards-container
+    gap: 15px
+    .func-card
+      padding: 20px
+      display: grid
+      justify-self: stretch
+      div:nth-child(1)
+        grid-column: 1 / 24
+      div:nth-child(2)
+        grid-column: 1 / 15
+      div:nth-child(3)
+        img
+          width: 5rem
+        grid-column: 15 / 24
+
+    .func-card:nth-child(1)
+      grid-column: 1 / 15
+    .func-card:nth-child(2)
+      grid-column: 15 / 24
+      div:nth-child(3)
+        justify-content: center
+    .func-card:nth-child(3)
+      grid-column: 1 / 15
+    .func-card:nth-child(4)
+      grid-column: 15 / 24
+      div:nth-child(3)
+        justify-content: center
+    .func-card:nth-child(5)
+      grid-column: 1 / 24
+    .func-card:nth-child(6)
+      grid-column: 1 / 15
+    .func-card:nth-child(7)
+      grid-column: 15 / 24
+  .func-card-leading-text
+    margin: 0 0 5px 0
+
+
+@media (max-width: $lg)
+  .func-cards-container
+    .func-card
+      column-gap: 16px
+      display: grid
+      padding: 30px
+      div:nth-child(1)
+        grid-column: 1 / 15
+      div:nth-child(2)
+        grid-column: 1 / 15
+      div:nth-child(3)
+        img
+          width: 3rem
+        margin-top: -50px
+        grid-column: 16 / 24
+    .func-card:nth-child(1)
+      grid-column: 1 / 24
+      div:nth-child(2)
+        width: 100%
+    .func-card:nth-child(2)
+      grid-column: 1 / 24
+    .func-card:nth-child(3)
+      grid-column: 1 / 24
+    .func-card:nth-child(4)
+      grid-column: 1 / 24
+    .func-card:nth-child(5)
+      div:nth-child(2)
+        width: 100%
+      grid-column: 1 / 24
+    .func-card:nth-child(6)
+      grid-column: 1 / 24
+    .func-card:nth-child(7)
+      grid-column: 1 / 24
+
+@media (max-width: $sm)
+  .func-cards-container
+    display: none
+  .func-cards-sm-container
+    display: block
+    @include font($fs4, $fwR)
+    list-style-image: url("https://i.ibb.co/L0Cg5s9/galka.png")
+    ul
+      margin: 0 -20px
+      li:nth-child(odd)
+        margin: 20px 0
+      li:nth-child(4)
+        list-style-image: none
+        list-style-type: none
+        @include font($fs3, $fwB)
+        color: #B8B8B8
+        letter-spacing: 0.25em
+        margin-left: -24px
+
+
+
+

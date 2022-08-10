@@ -1,0 +1,34 @@
+@import "../../Variables/Variables"
+
+.our-partners-block
+  display: grid
+  row-gap: 50px
+
+
+.our-partners-group
+  overflow: hidden
+  width: 100%
+
+.logos
+  @include center
+  justify-content: space-between
+  gap: 100px
+  animation: infinite-scroll 40s linear infinite
+
+.our-partners-logo
+  width: 12rem
+  @include center
+
+.logos:hover
+  animation-play-state: paused
+
+@keyframes infinite-scroll
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(-2000px)
+
+@media (max-width: $lg)
+  .our-partners-logo
+    img
+      width: 5rem

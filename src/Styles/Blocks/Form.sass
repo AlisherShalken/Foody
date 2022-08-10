@@ -1,0 +1,92 @@
+@import "../../Variables/Variables"
+
+form
+  @include center
+  flex-direction: column
+  gap: 20px
+
+.form-block
+  @include size(100%, auto)
+  @include center
+  flex-direction: column
+  gap: 30px
+  @include font($fs2, $fwR)
+
+.form-block-text
+  text-align: center
+  width: 60%
+  span:nth-child(odd)
+    @include font($fs4, $fwR)
+
+.form-block-input-text
+  @include font($fs4, $fwR)
+  display: flex
+  align-items: center
+  justify-content: left
+  flex-direction: row
+  gap: 10px
+
+.form-block-input-group
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 20px
+
+.form-block-input-block
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+.form-block-input
+  @include font($fs5, $fwR)
+  @include border(2px, $gray, 5px)
+  @include size(400px, 50px)
+  width: 100%
+  display: inline-block
+  padding: 0 20px
+  border: 1px solid #ccc
+  border-radius: 10px
+  box-sizing: border-box
+  font-family: $montserrat
+  &::placeholder
+    padding-left: 0
+    line-height: 30px
+    @include font($fs5, $fwR)
+
+
+.form-block-input-number
+  @include center
+  @include font($fs3, $fwR)
+  @include size(35px, 35px)
+  @include border(3px, $red, 50px)
+  color: $red
+  border-radius: 100px
+
+
+@media (max-width: $xl)
+  .form-block-input-group
+    grid-template-columns: 1fr
+    gap: 25px
+  .form-block-input-block
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+
+@media (max-width: $md)
+  .form-block-text
+    text-align: center
+    width: 100%
+  .form-block-input-group
+    display: flex
+    flex-direction: column
+  .form-block-input-block
+    margin: 0
+  .form-block-input
+    @include size(300px, 40px)
+  .form-block-input-number
+    margin: 0 5px 0 0
+
+
+@media (max-width: $sm)
+  .form-block-input
+    @include size(300px, 40px)

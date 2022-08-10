@@ -1,0 +1,15 @@
+.active {
+  display: block;
+}
+
+.inActive {
+  display: none;
+}
+
+.activeSpan {
+  display: inline;
+}
+
+.inActiveSpan {
+  display: none;
+}/*# sourceMappingURL=Arrows.module.css.map */
